@@ -5,6 +5,11 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
+if [ ! -d "$1" ]; then
+    echo "Error: Directory '$1' does not exist"
+    exit 1
+fi
+
 filename="logs_archive_$(date +%Y%m%d_%H%M%S).tar.gz"
 
 tar -czf $filename "$1"
