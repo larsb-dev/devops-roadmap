@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: my-tool.sh <log-directory>"
+    exit 1
+fi
+
+if [ ! -d "$1" ]; then
+    echo "Error: Directory '$1' does not exist"
+    exit 1
+fi
+
+filename="logs_archive_$(date +%Y%m%d_%H%M%S).tar.gz"
+
+tar -czf $filename "$1"
+
+echo "Archive created: $filename"
