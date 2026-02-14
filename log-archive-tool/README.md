@@ -20,7 +20,7 @@ log-archive /var/log/apache2
 
 ## Store archive in the cloud
 
-### Create storage account
+### Create Azure storage account
 
 ```bash
 az storage account create \
@@ -41,7 +41,7 @@ az storage container create \
 ### Generate SAS token
 
 - I did that in the portal, but you can also do it with the `az storage container generate-sas` command
-- SAS tokens are pretty nice, because you don't have to log in and they are also easily revoked
+- SAS tokens are pretty nice, because you don't have to log in and they also expire
 
 ### Export environment variables
 
@@ -56,3 +56,7 @@ export SAS_TOKEN=your_sas_token
 ```bash
 log-archive-cloud /var/log/apache2
 ``` 
+
+## Resources
+
+- [Upload a file to a storage blob](https://learn.microsoft.com/en-us/cli/azure/storage/blob?view=azure-cli-latest#az-storage-blob-upload)

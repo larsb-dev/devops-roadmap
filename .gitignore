@@ -3,3 +3,4 @@ __pycache__
 .secrets
 myvenv
 terraform/*terraform*
+*.log*
