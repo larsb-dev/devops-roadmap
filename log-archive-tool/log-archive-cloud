@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: my-tool.sh <log-directory>"
+    exit 1
+fi
+
+filename="logs_archive_$(date +%Y%m%d_%H%M%S).tar.gz"
+
+tar -czf $filename "$1"
+
+az storage blob upload --account-name "$ACCOUNT_NAME" --container-name "$CONTAINER_NAME" --name "$filename" --file "$filename" --sas-token "$SAS_TOKEN"
+
+rm $filename
