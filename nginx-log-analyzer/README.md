@@ -1,4 +1,4 @@
-# Nginx Log Analyser
+# Nginx Log Analyzer
 
 ## Download log file
 
