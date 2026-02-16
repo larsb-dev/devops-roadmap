@@ -43,7 +43,7 @@ export default defineConfig({
 https://larsb-dev.github.io/assets/index-COAvK7aG.css
 
 ✅ Good
-https:////larsb-dev.github.io/gh-deployment-workflow/assets/favicon.17e50649.svg
+https://larsb-dev.github.io/gh-deployment-workflow/assets/index-COAvK7aG.css
 ```
 
 ## Aside
