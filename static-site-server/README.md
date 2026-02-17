@@ -1,4 +1,4 @@
-# Setup an SSH Remote Server on DigitalOcean
+# nginx Static Site Server
 
 ## Generate SSH Keys
 
@@ -126,6 +126,7 @@ sudo ufw default allow outgoing
 
 ```bash
 sudo ufw allow ssh
+sudo ufw allow http
 sudo ufw allow https
 sudo ufw enable
 ```
@@ -160,11 +161,7 @@ sudo apt install certbot python3-certbot-nginx
 
 ```bash
 cd /etc/nginx/sites-available
-sudo touch yourdomain.com
-sudo nano yourdomain.com
-
-Add to file:
-server_name yourdomain.com www.yourdomain.com;
+echo "server_name yourdomain.com www.yourdomain.com;" | sudo tee yourdomain.com
 ```
 
 - Certbot needs to be able to find the correct server block in your Nginx configuration for it to be able to automatically configure SSL
@@ -196,9 +193,11 @@ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 sudo ufw delete allow http
 ```
 
-### The site is live
+### The site is live 🎉
 
 https://azurecloudlab.com/
+
+- The site might be down for cost reasons as you're reading this
 
 ## Rsync
 
@@ -208,7 +207,7 @@ And now finally to the actual topic of this project 😅
 rsync -a webpage/ nginx:/var/www/html
 ```
 
-- This will sync all files inside the webpage directory inside the html folder
+- This will sync all files inside the webpage directory to the html folder
 
 ## Edit SSH config file
 
