@@ -5,7 +5,7 @@
 3. [Nginx Log Analyser](https://roadmap.sh/projects/nginx-log-analyser)
 4. [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
 5. [SSH Remote Server Setup](https://roadmap.sh/projects/ssh-remote-server-setup)
-6. Static Site Server
+6. [Static Site Server](https://roadmap.sh/projects/static-site-server)
 7. Basic DNS Setup
 8. Simple Monitoring
 9. Dummy Systemd Service
