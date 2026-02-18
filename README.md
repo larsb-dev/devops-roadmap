@@ -6,7 +6,7 @@
 4. [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
 5. [SSH Remote Server Setup](https://roadmap.sh/projects/ssh-remote-server-setup)
 6. [Static Site Server](https://roadmap.sh/projects/static-site-server)
-7. Basic DNS Setup
+7. [Basic DNS Setup](https://roadmap.sh/projects/basic-dns)
 8. Simple Monitoring
 9. Dummy Systemd Service
 10. Basic Dockerfile
